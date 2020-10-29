@@ -1,0 +1,53 @@
+.navbar {
+    width : 90%;
+    height : 98px;
+    padding: 0 5%;
+    margin: 0;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: fixed;
+    top: -98px;
+    left: 0;
+    z-index: 1;
+    background-color :white;
+    transition: top 0.5s ease-out;
+}
+.navList {
+    position : relative;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    padding : 0;
+    margin: 0;
+    height : 100%;
+}
+.navBurger {
+    width: 2rem;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    color: white;
+    text-decoration: none;
+}
+.mobileNavList {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    padding : 0;
+    margin: 0;
+    height : auto;
+    width : 100%;
+    position : absolute;
+    top: 98px;
+    left : 0;
+    background-color: #1f1f20;
+    transform: scaleY(0);
+    transform-origin: 50% 0;
+    transition-property: transform;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-out;
+}
