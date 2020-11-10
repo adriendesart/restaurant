@@ -3,6 +3,10 @@ import PropTypes from 'prop-types';
 import './welcome.scss';
 import Navbar from "../components/navbar";
 import SlideshowParallax from "../components/slideshowparallax";
+import Presentation from "../components/presentation";
+import Events from "../components/events";
+import Menu from "../components/menu";
+import Takeaway from "../components/takeaway";
 
 
 export default class WelcomePage extends Component{
@@ -39,11 +43,19 @@ export default class WelcomePage extends Component{
                     deviceType={this.props.deviceType}
                     deviceOrientation={this.props.deviceOrientation}
                 />
-                <SlideshowParallax
+                <Presentation
                     deviceType={this.props.deviceType}
                     deviceOrientation={this.props.deviceOrientation}
                 />
-                <SlideshowParallax
+                <Events
+                    deviceType={this.props.deviceType}
+                    deviceOrientation={this.props.deviceOrientation}
+                />
+                <Menu
+                    deviceType={this.props.deviceType}
+                    deviceOrientation={this.props.deviceOrientation}
+                />
+                <Takeaway
                     deviceType={this.props.deviceType}
                     deviceOrientation={this.props.deviceOrientation}
                 />

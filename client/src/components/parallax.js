@@ -7,9 +7,9 @@ export default class Parallax extends Component{
 
     render(){
         return(
-            <section className="parallax fade" style={{backgroundImage: `url(${this.props.background})`, display : `${this.props.visible?"flex":"none"}`}}>
+            <div className="parallax fade" style={{backgroundImage: `url(${this.props.background})`, display : `${this.props.visible?"flex":"none"}`}}>
                 {this.props.children}
-            </section>
+            </div>
         )
     }
 }

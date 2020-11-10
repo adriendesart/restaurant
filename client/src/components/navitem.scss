@@ -7,8 +7,7 @@
     flex-flow: column nowrap;
     justify-content: flex-end;
     align-items: center;
-    transition-property: color;
-    transition-duration: 0.3s;
+    transition: color 1s;
     background-color : transparent;
     text-decoration: none;
     :hover{
@@ -35,6 +34,8 @@
 }
 .navLink {
         padding : 1rem 5px;
+        text-decoration: none;
+        color: black;
 }
 .mobileNavItem {
     width : 80%;
@@ -47,8 +48,7 @@
     justify-content: center;
     align-items: center;
     color :  rgb(255, 255, 255);
-    transition-property: color;
-    transition-duration: 0.3s;
+    transition: color 1s;
     background-color : transparent;
     text-decoration: none;
     :hover {

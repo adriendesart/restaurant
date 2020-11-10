@@ -33,7 +33,7 @@ export default class SlideshowParallax extends Component {
     }
     render(){
         return(
-            <div class="slideshow-container">
+            <section id="slideshow-container">
                 <Parallax background={ParallaxImage1} visible={this.state.actualBackground === 0}>
                     
                 </Parallax>
@@ -46,7 +46,7 @@ export default class SlideshowParallax extends Component {
                 <Parallax background={ParallaxImage4} visible={this.state.actualBackground === 3}>
                     
                 </Parallax>
-            </div>
+            </section>
         )
     }
 }

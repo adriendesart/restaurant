@@ -20,36 +20,43 @@ export default class Navbar extends Component{
             <Fragment>
                 <NavItem 
                     name={"Accueil"} 
+                    anchor={"presentation"}
                     deviceType={this.props.deviceType}
                     deviceOrientation={this.props.deviceOrientation}
                     />
                 <NavItem 
                     name={"Événements"}
-                    deviceType={this.props.deviceType}
-                    deviceOrientation={this.props.deviceOrientation}
-                    />
-                <NavItem 
-                    name={"À emporter"} 
+                    anchor={"events"}
                     deviceType={this.props.deviceType}
                     deviceOrientation={this.props.deviceOrientation}
                     />
                 <NavItem 
                     name={"La carte"}
+                    anchor={"menu"}
+                    deviceType={this.props.deviceType}
+                    deviceOrientation={this.props.deviceOrientation}
+                />
+                <NavItem 
+                    name={"À emporter"} 
+                    anchor={"takeaway"}
                     deviceType={this.props.deviceType}
                     deviceOrientation={this.props.deviceOrientation}
                 />
                 <NavItem 
                     name={"Galerie"}
+                    anchor={""}
                     deviceType={this.props.deviceType}
                     deviceOrientation={this.props.deviceOrientation}
                 />
                 <NavItem 
                     name={"Contact"}
+                    anchor={""}
                     deviceType={this.props.deviceType}
                     deviceOrientation={this.props.deviceOrientation}
                 />
                 <NavItem 
                     name={"Réservation"}
+                    anchor={""}
                     deviceType={this.props.deviceType}
                     deviceOrientation={this.props.deviceOrientation}
                 />
