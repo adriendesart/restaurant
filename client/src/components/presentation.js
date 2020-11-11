@@ -16,7 +16,7 @@ export default class Presentation extends Component{
                 <p>Sa cuisine basée sur les produits de la saison vous comblera tout au long de l’année.</p>
                 <p>Dès les beaux jours vous pourrez apprécier votre déjeuner en terrasse, dans un magnifique écrin de verdure.</p>
                 <div>
-
+                    
                 </div>
             </section>
         )
