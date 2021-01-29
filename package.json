@@ -1,0 +1,31 @@
+{
+  "name": "restaurant",
+  "version": "1.0.0",
+  "description": "Patern for restaurant with small CMS",
+  "main": "server.js",
+  "scripts": {
+    "dev":"nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adriendesart/restaurant.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adriendesart/restaurant/issues"
+  },
+  "homepage": "https://github.com/adriendesart/restaurant#readme",
+  "type": "module",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.10.7"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "engines": {
+    "node" : "14.x"
+  }
+}
