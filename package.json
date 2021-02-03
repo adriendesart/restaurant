@@ -4,7 +4,7 @@
   "description": "Patern for restaurant with small CMS",
   "main": "server.js",
   "scripts": {
-    "dev":"nodemon server.js"
+    "server": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -26,6 +26,6 @@
     "nodemon": "^2.0.4"
   },
   "engines": {
-    "node" : "14.x"
+    "node": "14.x"
   }
 }

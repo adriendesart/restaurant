@@ -5,7 +5,7 @@ import './sectiontitle.scss';
 
 const SectionTitle = (props) => {
     return(
-        <h2 class="sectiontitle">{props.title.toLowerCase()}</h2>
+        <h2 className="sectiontitle">{props.title.toLowerCase()}</h2>
     )
 }
 export default SectionTitle

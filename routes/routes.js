@@ -4,16 +4,20 @@ import {catchErrors} from '../utils/HOF.js';
 
 const router = express.Router()
 
-router.post('/addPlat', catchErrors(addPlat))
+router.post('/api/plats', catchErrors(addPlat))
 
-router.get('/readMenu', catchErrors(readMenu))
+router.get('/api/plats/:id', catchErrors(readPlat))
 
-router.get('/readPlat/:id', catchErrors(readPlat))
+router.patch('/api/plats/:id', catchErrors(updatePlat))
 
-router.patch('/updatePlat/:id', catchErrors(updatePlat))
+router.delete('/api/plats/:id', catchErrors(deletePlat))
 
-router.delete('/deletePlat/:id', catchErrors(deletePlat))
+router.get('/api/plats', catchErrors(readMenu))
 
-router.delete('/deleteMenu', catchErrors(deleteMenu))
+router.delete('/api/plats', catchErrors(deleteMenu))
+
+router.get('/*', (_,res) => {
+    res.sendFile(path.join(__dirname, '../client/build/index.html'))
+})
 
 export default router;

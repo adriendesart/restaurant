@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from "react"
 import "./navbar.scss"
 import PropTypes from 'prop-types';
-import NavItem from "./navitem";
+import NavItem from "../components/navitem";
 import Brand from "../img/brand_logo.png"
 import NavBurger from '../img/bars.svg'
 
