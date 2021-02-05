@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import './costinput.scss';
 
 const CostInput = ({plat, plats, setPlats, patchData})=>{
     
@@ -8,12 +9,14 @@ const CostInput = ({plat, plats, setPlats, patchData})=>{
     }
 
     return(
-        <label htmlFor="number" className="inputBox">Prix:
+        <label htmlFor="number" className="inputCostBox">Prix:
 		    <input onChange={handleChange}
             placeholder="num" 
             value={plat.cost} 
             type="number" 
+            className="inputCost"
             min="0"/>
+            €
 	    </label>
     )
 }

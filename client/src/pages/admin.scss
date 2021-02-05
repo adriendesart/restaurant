@@ -1,0 +1,26 @@
+#admin-page{
+    width : 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.form{
+    width : 100%;
+    margin: 0;
+    padding: 0;
+}
+.section-plats{
+    margin: 0 1rem;
+    padding: 0;
+}
+.plat{
+    margin: 0.5rem 1rem;
+    padding: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+}

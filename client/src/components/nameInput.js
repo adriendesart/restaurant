@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import './nameinput.scss';
 
 const NameInput = ({plat, plats, setPlats, patchData})=>{
 
@@ -8,10 +9,11 @@ const NameInput = ({plat, plats, setPlats, patchData})=>{
     }
 
     return(
-        <label htmlFor="text" className="inputBox">Nom :
+        <label htmlFor="text" className="inputNameBox">Nom :
             <input onChange={handleChange} 
             placeholder="text" 
-            value={plat.name} 
+            value={plat.name}
+            className="inputName" 
             type="text"/>
         </label>
     )
