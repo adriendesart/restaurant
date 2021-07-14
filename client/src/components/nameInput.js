@@ -15,7 +15,6 @@ const NameInput = ({plat, plats, setPlats, patchData})=>{
             value={plat.name}
             className="inputName" 
             type="text"
-            tabIndex="-1"
             />
         </label>
     )

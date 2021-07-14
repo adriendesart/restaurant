@@ -52,7 +52,7 @@ const Admin = () =>{
     return(
         <div id="admin-page">
             <SectionTitle title={'Carte hebdomadaire'}/>
-                <form className="form" noValidate>
+                <form className="form">
                     <section className="section-plats">
                         <SubSectionTitle title={'Les entrées'}/>
                         {plats.filter(x=>x.category === "entrée" && x.carte === "hebdomadaire").map(plat=>(

@@ -16,7 +16,7 @@ router.get('/api/plats', catchErrors(readMenu))
 
 router.delete('/api/plats', catchErrors(deleteMenu))
 
-router.get('/**', (_,res) => {
+router.get('/*', (_,res) => {
     res.sendFile(path.join(__dirname, '../client/build/index.html'))
 })
 

@@ -16,7 +16,6 @@ const CostInput = ({plat, plats, setPlats, patchData})=>{
             type="number" 
             className="inputCost"
             min="0"
-            tabIndex="-1"
             />
             €
 	    </label>
