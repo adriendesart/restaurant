@@ -13,7 +13,7 @@ const PlatSchema = new mongoose.Schema({
         trim: true,
         validate: value => {
             if(value < 0){
-                throw new Error('Le prix ne du plat ne peut être négatif.')
+                throw new Error('Le prix du plat ne peut être négatif.')
             }
         }
     },

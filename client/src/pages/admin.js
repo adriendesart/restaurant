@@ -9,12 +9,13 @@ import SubSectionTitle from "../components/subsectiontitle";
 const Admin = () =>{
     const [plats, setPlats] = useState([])
 
+    const fetchData = async () =>{
+        const data = await window.fetch("/api/plats")
+        const json = await data.json()
+        setPlats(json)
+    }
+
     useEffect(() => {
-        const fetchData = async () =>{
-            const data = await window.fetch("/api/plats")
-            const json = await data.json()
-            setPlats(json)
-        }
         fetchData()
     }, [])
 
@@ -43,24 +44,25 @@ const Admin = () =>{
                 'Content-Type' : 'application/json'
             },
             method : 'POST',
-            body : JSON.stringify({ category: category ,carte: carte})
+            body : JSON.stringify({ category: category ,carte: carte })
         })
+        await fetchData()
     }
 
     return(
         <div id="admin-page">
             <SectionTitle title={'Carte hebdomadaire'}/>
-                <form className="form">
+                <form className="form" noValidate>
                     <section className="section-plats">
                         <SubSectionTitle title={'Les entrées'}/>
                         {plats.filter(x=>x.category === "entrée" && x.carte === "hebdomadaire").map(plat=>(
                             <div key={plat._id} className="plat">
                                 <NameInput plat={plat} plats={plats} setPlats={setPlats} patchData={patchData}/>
                                 <CostInput plat={plat} plats={plats} setPlats={setPlats} patchData={patchData}/>
-                                <button onClick={(e)=>deleteData(plat, e)}>X</button>
+                                <button type="button" onClick={(e)=>deleteData(plat, e)}>X</button>
                             </div>
                         ))}
-                        <button onClick={(e)=>handleCreate({category : "entrée" ,carte : "hebdomadaire"},e)}>Ajouter un plat</button>
+                        <button className="btn-add-plat" type="button" onClick={(e)=>handleCreate({category : "entrée" ,carte : "hebdomadaire"},e)}>Ajouter un plat</button>
                     </section>
                     <section className="section-plats">
                         <SubSectionTitle title={'Les plats'}/>
@@ -68,10 +70,10 @@ const Admin = () =>{
                             <div key={plat._id} className="plat">
                                 <NameInput plat={plat} plats={plats} setPlats={setPlats} patchData={patchData}/>
                                 <CostInput plat={plat} plats={plats} setPlats={setPlats} patchData={patchData}/>
-                                <button onClick={(e)=>deleteData(plat, e)}>X</button>
+                                <button type="button" onClick={(e)=>deleteData(plat, e)}>X</button>
                             </div>
                         ))}
-                        <button onClick={(e)=>handleCreate({category : "plat" ,carte : "hebdomadaire"},e)}>Ajouter un plat</button>
+                        <button className="btn-add-plat" type="button" onClick={(e)=>handleCreate({category : "plat" ,carte : "hebdomadaire"},e)}>Ajouter un plat</button>
                     </section>
                     <section className="section-plats">
                         <SubSectionTitle title={'Les desserts'}/>
@@ -79,10 +81,10 @@ const Admin = () =>{
                             <div key={plat._id} className="plat">
                                 <NameInput plat={plat} plats={plats} setPlats={setPlats} patchData={patchData}/>
                                 <CostInput plat={plat} plats={plats} setPlats={setPlats} patchData={patchData}/>
-                                <button onClick={(e)=>deleteData(plat, e)}>X</button>
+                                <button type="button" onClick={(e)=>deleteData(plat, e)}>X</button>
                             </div>
                         ))}
-                        <button onClick={(e)=>handleCreate({category : "dessert" ,carte : "hebdomadaire"},e)}>Ajouter un plat</button>
+                        <button className="btn-add-plat" type="button" onClick={(e)=>handleCreate({category : "dessert" ,carte : "hebdomadaire"},e)}>Ajouter un plat</button>
                     </section>
                     <section className="section-plats">
                         <SubSectionTitle title={'Les suggestions'}/>
@@ -90,10 +92,10 @@ const Admin = () =>{
                             <div key={plat._id} className="plat">
                                 <NameInput plat={plat} plats={plats} setPlats={setPlats} patchData={patchData}/>
                                 <CostInput plat={plat} plats={plats} setPlats={setPlats} patchData={patchData}/>
-                                <button onClick={(e)=>deleteData(plat, e)}>X</button>
+                                <button type="button" onClick={(e)=>deleteData(plat, e)}>X</button>
                             </div>
                         ))}
-                        <button onClick={(e)=>handleCreate({category : "suggestion" ,carte : "hebdomadaire"},e)}>Ajouter un plat</button>
+                        <button className="btn-add-plat" type="button" onClick={(e)=>handleCreate({category : "suggestion" ,carte : "hebdomadaire"},e)}>Ajouter un plat</button>
                     </section>
                 </form>
                 <SectionTitle title={'Carte à emporter'}/>
@@ -104,10 +106,10 @@ const Admin = () =>{
                             <div key={plat._id} className="plat">
                                 <NameInput plat={plat} plats={plats} setPlats={setPlats} patchData={patchData}/>
                                 <CostInput plat={plat} plats={plats} setPlats={setPlats} patchData={patchData}/>
-                                <button onClick={(e)=>deleteData(plat, e)}>X</button>
+                                <button type="button" onClick={(e)=>deleteData(plat, e)}>X</button>
                             </div>
                         ))}
-                        <button onClick={(e)=>handleCreate({category : "entrée" ,carte : "emporter"},e)}>Ajouter un plat</button>
+                        <button className="btn-add-plat" type="button" onClick={(e)=>handleCreate({category : "entrée" ,carte : "emporter"},e)}>Ajouter un plat</button>
                     </section> 
                     <section className="section-plats">
                         <SubSectionTitle title={'Les plats'}/>
@@ -115,10 +117,10 @@ const Admin = () =>{
                             <div key={plat._id} className="plat">
                                 <NameInput plat={plat} plats={plats} setPlats={setPlats} patchData={patchData}/>
                                 <CostInput plat={plat} plats={plats} setPlats={setPlats} patchData={patchData}/>
-                                <button onClick={(e)=>deleteData(plat, e)}>X</button>
+                                <button type="button" onClick={(e)=>deleteData(plat, e)}>X</button>
                             </div>
                         ))}
-                        <button onClick={(e)=>handleCreate({category : "plat" ,carte : "emporter"},e)}>Ajouter un plat</button>
+                        <button className="btn-add-plat" type="button" onClick={(e)=>handleCreate({category : "plat" ,carte : "emporter"},e)}>Ajouter un plat</button>
                     </section> 
                     <section className="section-plats">
                         <SubSectionTitle title={'Les desserts'}/>
@@ -126,10 +128,10 @@ const Admin = () =>{
                             <div key={plat._id} className="plat">
                                 <NameInput plat={plat} plats={plats} setPlats={setPlats} patchData={patchData}/>
                                 <CostInput plat={plat} plats={plats} setPlats={setPlats} patchData={patchData}/>
-                                <button onClick={(e)=>deleteData(plat, e)}>X</button>
+                                <button type="button" onClick={(e)=>deleteData(plat, e)}>X</button>
                             </div>
                         ))}
-                        <button onClick={(e)=>handleCreate({category : "dessert" ,carte : "emporter"},e)}>Ajouter un plat</button>
+                        <button className="btn-add-plat" type="button" onClick={(e)=>handleCreate({category : "dessert" ,carte : "emporter"},e)}>Ajouter un plat</button>
                     </section> 
                     <section className="section-plats">
                         <SubSectionTitle title={'Les suggestions'}/>
@@ -137,10 +139,10 @@ const Admin = () =>{
                             <div key={plat._id} className="plat">
                                 <NameInput plat={plat} plats={plats} setPlats={setPlats} patchData={patchData}/>
                                 <CostInput plat={plat} plats={plats} setPlats={setPlats} patchData={patchData}/>
-                                <button onClick={(e)=>deleteData(plat, e)}>X</button>
+                                <button type="button" onClick={(e)=>deleteData(plat, e)}>X</button>
                             </div>
                         ))}
-                        <button onClick={(e)=>handleCreate({category : "suggestion" ,carte : "emporter"},e)}>Ajouter un plat</button>
+                        <button className="btn-add-plat" type="button" onClick={(e)=>handleCreate({category : "suggestion" ,carte : "emporter"},e)}>Ajouter un plat</button>
                     </section>
                 </form>
             <SectionTitle title={'Menu hebdomadaire'}/>

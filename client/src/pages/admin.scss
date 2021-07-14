@@ -15,12 +15,19 @@
 .section-plats{
     margin: 0 1rem;
     padding: 0;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: left;
 }
 .plat{
-    margin: 0.5rem 1rem;
+    margin: 0.5rem 0rem;
     padding: 0;
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
     align-items: center;
+}
+.btn-add-plat{
+    width:fit-content;
 }
