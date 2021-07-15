@@ -1,12 +1,12 @@
 import React, { Component, Fragment } from "react";
 import PropTypes from 'prop-types';
 import './welcome.scss';
-import Navbar from "../sections/navbar";
-import SlideshowParallax from "../sections/slideshowparallax";
-import Presentation from "../sections/presentation";
-import Events from "../sections/events";
-import Menu from "../sections/menu";
-import Takeaway from "../sections/takeaway";
+import Navbar from "./../components/welcome/navbar";
+import SlideshowParallax from "./../components/welcome/slideshowparallax";
+import Presentation from "./../components/welcome/presentation";
+import Events from "./../components/welcome/events";
+import Menu from "./../components/welcome/menu";
+import Takeaway from "./../components/welcome/takeaway";
 
 
 export default class WelcomePage extends Component{

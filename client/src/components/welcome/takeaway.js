@@ -1,21 +1,21 @@
 import React, { Component } from "react";
 import PropTypes from 'prop-types';
-import './events.scss';
-import SectionTitle from "../components/sectiontitle";
+import './takeaway.scss';
+import SectionTitle from "./../sectiontitle";
 
 
-export default class Events extends Component{
+export default class Takeaway extends Component{
     render(){
         return(
-            <section id="events">
+            <section id="takeaway">
                 <SectionTitle 
-                    title={'événements'}
+                    title={'à emporter'}
                 />
             </section>
         )
     }
 }
-Events.propTypes = {
+Takeaway.propTypes = {
     deviceType : PropTypes.string,
     deviceOrientation: PropTypes.string,
 }

@@ -1,9 +1,9 @@
 import React, { Component, Fragment } from "react"
 import "./navbar.scss"
 import PropTypes from 'prop-types';
-import NavItem from "../components/navitem";
-import Brand from "../img/brand_logo.png"
-import NavBurger from '../img/bars.svg'
+import NavItem from "./navitem";
+import Brand from "./../../img/brand_logo.png"
+import NavBurger from './../../img/bars.svg'
 
 
 export default class Navbar extends Component{

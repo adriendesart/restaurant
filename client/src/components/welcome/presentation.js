@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from 'prop-types';
 import './presentation.scss';
-import SectionTitle from "../components/sectiontitle";
+import SectionTitle from "./../sectiontitle";
 
 
 export default class Presentation extends Component{

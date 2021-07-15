@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import PropTypes from 'prop-types';
 import './slideshowparallax.scss';
-import Parallax from "../components/parallax";
-import ParallaxImage1 from "../img/parallax1.jpg";
-import ParallaxImage2 from "../img/parallax2.jpg";
-import ParallaxImage3 from "../img/parallax3.jpg";
-import ParallaxImage4 from "../img/parallax4.jpg";
-import ArrowDown from './../img/arrow-down.svg';
+import Parallax from "./parallax";
+import ParallaxImage1 from "./../../img/parallax1.jpg";
+import ParallaxImage2 from "./../../img/parallax2.jpg";
+import ParallaxImage3 from "./../../img/parallax3.jpg";
+import ParallaxImage4 from "./../../img/parallax4.jpg";
+import ArrowDown from './../../img/arrow-down.svg';
 
 export default class SlideshowParallax extends Component {
     state ={
